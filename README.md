@@ -32,7 +32,28 @@ Write a nested list and Docstosaurus will convert it to a hierarchy directoiy st
   
   Bullet Points, Numbers, Letters, Roman Numbers, Tabs, spaces, or indent. 
 
-	
+You can even put nested lists INSIDE of files!!! 
+- lists will help you
+- present the key points
+- that you want your users to remember
+  - and you may nest them
+    - multiple times
+
+___for docusaorus you can have internal links for indivual pages, and the internal links can be nested! we love nests! use markdown syntax for h1 and h2 headers
+## Headers
+
+will show up on the table of contents on the upper right
+
+So that your users will know what this page is all about without scrolling down or even without reading too much.
+
+## Only h2 and h3 will be in the TOC by default.
+
+You can configure the TOC heading levels either per-document or in the theme configuration.
+
+The headers are well-spaced so that the hierarchy is clear.
+
+
+
 ![Docstosaurus Logo](https://github.com/morganross/docstosaurus/raw/main/logo.png)
 
 **Docstosaurus** is a Python-based GUI application designed to transform structured Markdown (`.md`) files into organized directory hierarchies with individual Markdown files. Tailored for developers, writers, and content creators, Docstosaurus simplifies the management of extensive documentation projects by breaking down complex Markdown documents into manageable, interlinked files and folders.
