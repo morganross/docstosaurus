@@ -32,14 +32,14 @@ Write a nested list and Docstosaurus will convert it to a hierarchy directoiy st
   
   Bullet Points, Numbers, Letters, Roman Numbers, Tabs, spaces, or indent. 
 
-You can even put nested lists INSIDE of files!!! 
+You can even put** nested lists INSIDE of files!!!** ist make it bold!
 - lists will help you
 - present the key points
 - that you want your users to remember
   - and you may nest them
     - multiple times
 
-___for docusaorus you can have internal links for indivual pages, and the internal links can be nested! we love nests! use markdown syntax for h1 and h2 headers
+___for docusaorus you can have internal links for indivual pages, a table of contents for that file will be generated on the top right and the **internal links can be nested!** we love nests! use markdown syntax for h1 and h2 headers
 ## Headers
 
 will show up on the table of contents on the upper right
