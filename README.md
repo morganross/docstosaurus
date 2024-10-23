@@ -32,7 +32,7 @@ Write a nested list and Docstosaurus will convert it to a hierarchy directoiy st
   
   Bullet Points, Numbers, Letters, Roman Numbers, Tabs, spaces, or indent. 
 
-You can even put** nested lists INSIDE of files!!!** ist make it bold!
+You can even put **nested lists INSIDE of files!!!** just make it bold!
 - lists will help you
 - present the key points
 - that you want your users to remember
