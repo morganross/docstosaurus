@@ -24,7 +24,9 @@ Write a nested list and Docstosaurus will convert it to a hierarchy directoiy st
     - Here is a a file called “hiworld.txt”
     - **Lets write** in this file
     - **HELLO WORLD**
-    - **All 3** of these lines are INSIDE the file. Bold is Content. <<<ipsom dorum>>> is bold
+    - **All 4 of these bold lines are INSIDE the file. Anything bold gets written INSIDE the file. Bold on the list is Content in the file.**
+    - **If you want something in your file to actully be bold** just use this instead **#@ipsom dorum#@** becomes bold.
+
     - What a time to be alive! This is a new file! “Specifyname.lol”
     - So long as it's “something.dot.something.in.quotes”
 
