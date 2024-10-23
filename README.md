@@ -22,7 +22,7 @@ Write a nested list and Docstosaurus will convert it to a hierarchy directoiy st
   - Wow sub folder
     - Files are good too
     - Here is a a file called “hiworld.txt” it will have content written in it.
-    - **Lets write** in this file
+    - **Lets write in this file**
     - **HELLO WORLD**
     - **All 4 of these bold lines are INSIDE the file. Anything bold gets written INSIDE the file. Bold on the list is Content in the file.**
     - **If you want something in your file to actully be bold** just use this instead **#@ipsom dorum#@** becomes bold.
