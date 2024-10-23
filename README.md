@@ -9,8 +9,8 @@ Write a nested list and Docstosaurus will convert it to a hierarchy directoiy st
   - This is a subdirectory
   - This one is too
   - I named this directory &$special folder&$
-    - The lines on the last layer become empty files
-    - The deepest level is indivual files
+    - POW This line becomes a file. The lines on the last layer become empty files
+    - NO WAY!! Files are named after the line they represent, in this case, no_way!!.md The deepest level is indivual files.
     - Unless specified, files are `.MD`
   - Back to Folder
 - New Folder!
