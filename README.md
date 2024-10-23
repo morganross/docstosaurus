@@ -29,6 +29,8 @@ Write a nested list and Docstosaurus will convert it to a hierarchy directoiy st
 
     - What a time to be alive! This is a new empty file! “Specifyname.lol”
     - So long as it's “something.dot.something.in.quotes”
+  
+  Bullet Points, Numbers, Letters, Roman Numbers, Tabs, spaces, or indent. 
 
 	
 ![Docstosaurus Logo](https://github.com/morganross/docstosaurus/raw/main/logo.png)
