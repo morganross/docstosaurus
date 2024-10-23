@@ -12,6 +12,7 @@ Write a nested list and Docstosaurus will convert it to a hierarchy directoiy st
     - The last layer is a file
     - The deepest level is a file
     - Unless specified, files are `.MD`
+  - Back to Folder
 - New Folder!
   - Look At all these folders
   - I love sub folders
