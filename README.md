@@ -9,8 +9,8 @@ Write a nested list and Docstosaurus will convert it to a hierarchy directoiy st
   - This is a subdirectory
   - This one is too
   - I named this directory &$special folder&$
-    - The last layer is a file
-    - The deepest level is a file
+    - The lines on the last layer become empty files
+    - The deepest level is indivual files
     - Unless specified, files are `.MD`
   - Back to Folder
 - New Folder!
@@ -21,13 +21,13 @@ Write a nested list and Docstosaurus will convert it to a hierarchy directoiy st
     - By default files are dot em dee
   - Wow sub folder
     - Files are good too
-    - Here is a a file called “hiworld.txt”
+    - Here is a a file called “hiworld.txt” it will have content written in it.
     - **Lets write** in this file
     - **HELLO WORLD**
     - **All 4 of these bold lines are INSIDE the file. Anything bold gets written INSIDE the file. Bold on the list is Content in the file.**
     - **If you want something in your file to actully be bold** just use this instead **#@ipsom dorum#@** becomes bold.
 
-    - What a time to be alive! This is a new file! “Specifyname.lol”
+    - What a time to be alive! This is a new empty file! “Specifyname.lol”
     - So long as it's “something.dot.something.in.quotes”
 
 	
