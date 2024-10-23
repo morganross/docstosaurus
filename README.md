@@ -4,6 +4,10 @@
 
 **Docstosaurus** is a Python-based GUI application designed to transform structured Markdown (`.md`) files into organized directory hierarchies with individual Markdown files. Tailored for developers, writers, and content creators, Docstosaurus simplifies the management of extensive documentation projects by breaking down complex Markdown documents into manageable, interlinked files and folders.
 
+**Docstosaurus** allows the user to create a directory structure, files, and thier content from a text document like Word or Google Docs, or any text editor that is hierarchy-aware and saves as Markdown.
+Text is sanitized before creating filenames by default, or you can specify exact filesnames inline in the document.
+
+actully it doesnt need markdown at all. it goes by spaces. and allows for imperfections. 
 ---
 
 ## Table of Contents
