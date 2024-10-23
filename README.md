@@ -1,6 +1,7 @@
 
 # Docstosaurus
 
+Write a nested list and convert it to a hierarchy directoiy structure, files and their content.
 
 ## Directory Structure
 
