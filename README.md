@@ -1,4 +1,4 @@
-
+'
 # Docstosaurus
 
 Write a nested list and convert it to a hierarchy directoiy structure, files and their content.
@@ -8,7 +8,7 @@ Write a nested list and convert it to a hierarchy directoiy structure, files and
 - This is a directory
   - This is a subdirectory
   - This one is too
-  - I named this directory <<<special folder>>>
+  - I named this directory &$special folder&$
     - The last layer is a file
     - The deepest level is a file
     - Unless specified, files are `.MD`
