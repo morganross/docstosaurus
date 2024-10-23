@@ -29,8 +29,16 @@ Write a nested list and Docstosaurus will convert it to a hierarchy directoiy st
 
     - What a time to be alive! This is a new empty file! “Specifyname.lol”
     - So long as it's “something.dot.something.in.quotes”
+-------------------------------------------------------------------------------
 
 
+-------------------------------------------------------------------------------
+
+
+-------------------------------------------------------------------------------
+
+
+-------------------------------------------------------------------------------
 
 
 
