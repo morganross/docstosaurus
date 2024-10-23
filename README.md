@@ -10,7 +10,7 @@ Write a nested list and Docstosaurus will convert it to a hierarchy directoiy st
   - This one is too
   - I named this directory &$special folder&$
     - POW This line becomes a file. The lines on the last layer become empty files
-    - NO WAY!! Files are named after the line they represent, in this case, no_way!!.md The deepest level is indivual files.
+    - **NO WAY!!** Files and folders are named after the line they represent, in this case, **no_way!!.md**
     - Unless specified, files are `.MD`
   - Back to Folder
 - New Folder!
