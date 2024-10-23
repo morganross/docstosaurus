@@ -2,27 +2,30 @@
 # Docstosaurus
 
 
-This is a directory  
-	This is a subdirectory	  
-	This one is too  
-	I named this directory \<\<\<special folder\>\>\>  
-		The last layer is a file  
-		The deepest level is a file  
-		Unless specified, files are .MD  
-New Folder\!  
-	Look At all these folders  
-	I love sub folders  
-		Files are good too  
-		Here is a file  
-		By default files are dot em dee  
-	Wow sub folder  
-		Files are good too  
-		Here is a a file called “hiworld.txt”  
-		**Lets write in this file**  
-		**HELLO WORLD**  
-		**All 3 of these lines are INSIDE the file. Bold is Content. \<\<\<ipsom dorum\>\>\> is bold**  
-		What a time to be alive\! This is a new file\! “Specifyname.lol”  
-		So long as its “something.dot.something.in.quotes”  
+## Directory Structure
+
+- This is a directory
+  - This is a subdirectory
+  - This one is too
+  - I named this directory <<<special folder>>>
+    - The last layer is a file
+    - The deepest level is a file
+    - Unless specified, files are `.MD`
+- New Folder!
+  - Look At all these folders
+  - I love sub folders
+    - Files are good too
+    - Here is a file
+    - By default files are dot em dee
+  - Wow sub folder
+    - Files are good too
+    - Here is a a file called “hiworld.txt”
+    - **Lets write** in this file
+    - **HELLO WORLD**
+    - **All 3** of these lines are INSIDE the file. Bold is Content. <<<ipsom dorum>>> is bold
+    - What a time to be alive! This is a new file! “Specifyname.lol”
+    - So long as it's “something.dot.something.in.quotes”
+
 	
 ![Docstosaurus Logo](https://github.com/morganross/docstosaurus/raw/main/logo.png)
 
