@@ -1,8 +1,12 @@
-import hashlib
 import os
 import re
+import hashlib
+import logging
 import tkinter as tk
 from tkinter import filedialog, messagebox, scrolledtext
+
+# Configure logging
+logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
 
 # Utility Functions
 
@@ -24,43 +28,51 @@ def sanitize_and_clean_name(name, max_length=20):
     """
     # Combine regex operations to remove periods, invalid characters, preserve double asterisks
     name = re.sub(r'^[\.\-]+\s*|[<>:"/\\|?]', '', name).strip()
+    # Remove trailing spaces
+    name = name.rstrip()
+    
     # Truncate the name if it exceeds the maximum length
     base, ext = os.path.splitext(name)
-    return base[:max_length] + ext if len(base) > max_length else base + ext
+    if len(base) > max_length:
+        base = base[:max_length//2] + '...' + base[-max_length//2:]
+    
+    # Disallow invalid folder characters like . or space in the last 5 characters
+    if len(base) > 5:
+        base = base[:-5] + re.sub(r'[ .]', '', base[-5:])
+    else:
+        base = re.sub(r'[ .]', '', base)
+    
+    return base + ext
 
 def alternative_sanitize_and_clean_name(name, max_length=20):
     """
     Alternative sanitization function that removes numbers and replaces periods with underscores.
-
+removes digits#######################also uses unsndersocres?
     Args:
         name (str): The name to be sanitized and cleaned.
         max_length (int): The maximum length for the cleaned name.
     """
-   
     # Remove invalid characters and replace periods and numbers
     name = re.sub(r'[<>:"/\\|?]', '', name)  # Remove invalid characters
-    
-   
-    name = name.strip()  # Remove leading and trailing whitespace
-  
-    name = re.sub(r'^\d+', '', name)  # Remove digits only if they appear as the first character in a line
-   
-   
     name = re.sub(r'\.', '', name)  # Replace periods with nothing
-  
+    name = re.sub(r'^\d+', '', name)  # Remove digits only if they appear as the first character in a line
+    
 
-  
+       # Remove trailing spaces
+    name = name.rstrip()
+    
     # Truncate the name if it exceeds the maximum length
-   
     base, ext = os.path.splitext(name)
     if len(base) > max_length:
         base = base[:max_length//2] + '...' + base[-max_length//2:]
+    
+    # Disallow invalid folder characters like . or space in the last 5 characters
+    if len(base) > 5:
+        base = base[:-5] + re.sub(r'[ .]', '', base[-5:])
+    else:
+        base = re.sub(r'[ .]', '', base)
+    
     return base + ext
-
-
-
-
-
 
 def write_md_file(path, content, lines, front_matter=None):
     """
@@ -72,6 +84,7 @@ def write_md_file(path, content, lines, front_matter=None):
         lines (list): Additional content lines to write.
         front_matter (str, optional): The front matter to include at the top of the file.
     """
+    os.makedirs(os.path.dirname(path), exist_ok=True)  # Ensure parent directories exist
     with open(path, 'w', encoding='utf-8') as md_file:
         # Write the front matter if provided
         if front_matter:
@@ -126,7 +139,8 @@ def categorize_lines(list_content):
             'Content': content,
             'Children': [],
             'BodyLines': [],
-            'UniqueID': unique_id
+            'UniqueID': unique_id,
+            'FULLLINE': line
         }
 
         while stack and stack[-1]['IndentLevel'] >= indent_level:
@@ -143,7 +157,7 @@ def categorize_lines(list_content):
     return root
 
 # Structure Creation Function
-def create_structure(node, parent_path, id_to_path_map, sanitize_function):
+def create_structure(node, parent_path, id_to_path_map, sanitize_function, allow_empty_folders):
     """
     Recursively creates directories and Markdown files based on the hierarchical structure.
 
@@ -152,9 +166,11 @@ def create_structure(node, parent_path, id_to_path_map, sanitize_function):
         parent_path (str): The path to the parent directory.
         id_to_path_map (dict): A mapping from unique IDs to paths.
         sanitize_function (function): The function to use for sanitizing names.
+        allow_empty_folders (bool): Whether to allow empty folders.
     """
     for child in node.get('Children', []):
         content = child['Content']
+        content_FULLLINE = child['FULLLINE']
         sanitized_name = sanitize_function(content)
         current_path = os.path.join(parent_path, sanitized_name)
 
@@ -175,7 +191,7 @@ def create_structure(node, parent_path, id_to_path_map, sanitize_function):
         id_to_path_map[child['UniqueID']] = normalized_current_path
 
         # Prepare the front matter with proper escaping
-        title_line = escape_title(content)
+        title_line = escape_title(content_FULLLINE)
         front_matter = f"---\n{title_line}---\n\n"
 
         if child['Children']:
@@ -185,11 +201,20 @@ def create_structure(node, parent_path, id_to_path_map, sanitize_function):
             md_file_path = os.path.join(normalized_current_path, 'index.md')
             write_md_file(md_file_path, '', child.get('BodyLines', []), front_matter)
             # Recursively create structure for child nodes
-            create_structure(child, normalized_current_path, id_to_path_map, sanitize_function)
+            create_structure(child, normalized_current_path, id_to_path_map, sanitize_function, allow_empty_folders)
+        elif allow_empty_folders:
+            # Check if any siblings have children
+            siblings_have_children = any(sibling['Children'] for sibling in node['Children'] if sibling != child)
+
+            if siblings_have_children:
+                # Create a directory with index.md if any siblings have children
+                os.makedirs(normalized_current_path, exist_ok=True)
+                md_file_path = os.path.join(normalized_current_path, 'index.md')
+                write_md_file(md_file_path, '', child.get('BodyLines', []), front_matter)
         else:
-            # Create a .md file for leaf nodes
-            md_file_path = f"{normalized_current_path}.md"
-            write_md_file(md_file_path, '', child.get('BodyLines', []), front_matter)
+                # Create a .md file if no siblings have children
+                md_file_path = f"{normalized_current_path}.md"
+                write_md_file(md_file_path, '', child.get('BodyLines', []), front_matter)
 
 class ProcessingApp:
     def __init__(self, root):
@@ -208,12 +233,21 @@ class ProcessingApp:
 
         # Checkbox for Alternative Sanitization
         self.use_alternative_sanitization = tk.BooleanVar()
-        self.sanitization_checkbox = tk.Checkbutton(self.root, text="Use Alternative Sanitization", variable=self.use_alternative_sanitization)
+        self.sanitization_checkbox = tk.Checkbutton(self.root, text="Remove Digits", variable=self.use_alternative_sanitization)
         self.sanitization_checkbox.pack(pady=5)
+
+        # Checkbox for Allow Empty Folders
+        self.allow_empty_folders = tk.BooleanVar()
+        self.empty_folders_checkbox = tk.Checkbutton(self.root, text="Allow Empty Folders", variable=self.allow_empty_folders)
+        self.empty_folders_checkbox.pack(pady=5)
 
         # Run Processing Button
         self.run_button = tk.Button(self.root, text="Run Processing", command=self.run_processing)
         self.run_button.pack(pady=20)
+
+        # Delete Contents Button
+        self.delete_button = tk.Button(self.root, text="Delete Contents of Base Directory", command=self.delete_base_directory_contents)
+        self.delete_button.pack(pady=5)
 
         # Output Text Area
         self.output_text = scrolledtext.ScrolledText(self.root, height=15, state='disabled')
@@ -246,10 +280,38 @@ class ProcessingApp:
 
         self.execute_processing(self.base_dir, self.input_file)
 
+    def delete_base_directory_contents(self):
+        if not hasattr(self, 'base_dir') or not self.base_dir:
+            messagebox.showerror("Error", "Please select a base directory.")
+            return
+    
+        for root, dirs, files in os.walk(self.base_dir, topdown=False):
+            for name in files:
+                try:
+                    os.remove(os.path.join(root, name))
+                except Exception as e:
+                    logging.error(f"Failed to delete file {name}: {e}")
+            for name in dirs:
+                try:
+                    os.rmdir(os.path.join(root, name))
+                except Exception as e:
+                    logging.error(f"Failed to delete directory {name}: {e}")
+    
+        self.log(f"Deleted contents of base directory: {self.base_dir}")
+        messagebox.showinfo("Info", "Contents of base directory deleted successfully.")
+
     def execute_processing(self, base_dir, input_file):
         try:
             self.log("Starting processing...")
             os.makedirs(base_dir, exist_ok=True)
+
+            # Configure logging to write to a file in the base directory
+            log_file_path = os.path.join(base_dir, 'processing.log')
+            file_handler = logging.FileHandler(log_file_path)
+            file_handler.setLevel(logging.DEBUG)
+            formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
+            file_handler.setFormatter(formatter)
+            logging.getLogger().addHandler(file_handler)
 
             # Read the input file content directly
             with open(input_file, 'r', encoding='utf-8') as f:
@@ -268,13 +330,15 @@ class ProcessingApp:
                 sanitize_function = sanitize_and_clean_name
 
             # Create the folder structure and .md files using the selected sanitization function
-            create_structure(root, base_dir, id_to_path_map, sanitize_function)
+            create_structure(root, base_dir, id_to_path_map, sanitize_function, self.allow_empty_folders.get())
 
             self.log("Processing completed successfully!")
+            logging.info("Processing completed successfully!")
 
         except Exception as e:
             error_msg = f"An error occurred during processing:\n{str(e)}"
             self.log(error_msg)
+            logging.error(error_msg)
 
 def main():
     root = tk.Tk()
