@@ -17,7 +17,7 @@ Write a nested list and Docstosaurus will convert it to a hierarchy directoiy st
   - Look At all these folders
   - I love sub folders
     - Files are good too
-    - Here is a file
+    - 1234 You can have digits in your titles! this is a file
     - By default files are dot em dee
   - Wow sub folder
     - Files are good too
@@ -27,33 +27,17 @@ Write a nested list and Docstosaurus will convert it to a hierarchy directoiy st
     - **All 4 of these bold lines are INSIDE the file. Anything bold gets written INSIDE the file. Bold on the list is Content in the file.**
     - **If you want something in your file to actully be bold** just use this instead **#@ipsom dorum#@** becomes bold.
       - **You can even put nested lists INSIDE of files!!!  just make it bold!**
-
     - What a time to be alive! This is a new empty file! “Specifyname.lol”
     - So long as it's “something.dot.something.in.quotes”
+   
+      
 -------------------------------------------------------------------------------
-
-
--------------------------------------------------------------------------------
-
-
--------------------------------------------------------------------------------
-
-
--------------------------------------------------------------------------------
-
-
 
 
 
 
   Bullet Points, Numbers, Letters, Roman Numbers, Tabs, spaces, or indent. 
 
-You can even put **nested lists INSIDE of files!!!** just make it bold!
-- lists will help you
-- present the key points
-- that you want your users to remember
-  - and you may nest them
-    - multiple times
 
 ___for docusaorus you can have internal links for indivual pages, a table of contents for that file will be generated on the top right and the **internal links can be nested!** we love nests! use markdown syntax for h1 and h2 headers
 ## Headers
