@@ -8,7 +8,6 @@ Write a nested list and Docstosaurus will convert it to a hierarchy directoiy st
 - This is a directory named afther this very line
   - This becomes a subdirectory whose name would start with This becomes a sub......
   - This one is too. Directories are named after the line on the list you proide.
-  - I named this directory &$special folder&$
     - This line becomes a file. The lines on the last layer become empty files.
     - What Really Files and folders are named after the line they represent, in this case, **What Really Files.md**
     - Unless specified, files are `.MD`
