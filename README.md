@@ -41,13 +41,20 @@ it doesnt make empty folders
 
   Bullet Points, Numbers, Letters, Roman Numbers, Tabs, spaces, or indent. 
 
-
+##WORDS
 node = a line in the list
 leaf = file = a node with no children
 brach = direictoy = folder
 
+deepest layer
+deepest level
 
-___for docusaorus you can have internal links for indivual pages, a table of contents for that file will be generated on the top right and the **internal links can be nested!** we love nests! use markdown syntax for h1 and h2 headers
+hiearrachy
+fodler strucutre
+
+nested list
+
+for docusaorus you can have internal links for indivual pages, a table of contents for that file will be generated on the top right and the **internal links can be nested!** we love nests! use markdown syntax for h1 and h2 headers
 ## Headers
 
 will show up on the table of contents on the upper right
