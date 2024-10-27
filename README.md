@@ -3,6 +3,9 @@
 
 Write a nested list and Docstosaurus will convert it to a hierarchy directoiy structure, files and their content.
 
+
+it doesnt make empty folders
+
 ## Directory Structure
 
 - This is a directory named afther this very line
