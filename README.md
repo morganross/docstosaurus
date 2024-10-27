@@ -11,7 +11,7 @@ Write a nested list and Docstosaurus will convert it to a hierarchy directoiy st
     - This line becomes a file. The lines on the last layer become empty files.
     - What Really Files and folders are named after the line they represent, in this case, **What Really Files.md**
     - Unless specified, files are `.MD`
-  - Back to Folder
+  - Back to Folder, empty becuase it has no children
 - New Folder!
   - Look At all these folders
   - I love sub folders
