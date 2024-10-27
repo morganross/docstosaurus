@@ -8,10 +8,10 @@ it doesnt make empty folders
 
 ## Directory Structure
 
-- This is a directory named after this very line
+- This line becomes a directory named after this very line
   - This becomes a file whose name would start with This becomes a file
   - File here. If a line has no children, it becomes a file.
-  - This one is a folder. 
+  - Another folder, under /This line becomes/
     - This line becomes a file. The lines on the last layer become empty files.
     - What Really Files and folders are named after the line they represent, in this case, **What Really Files.md**
     - Unless specified, files are `.MD`
@@ -20,7 +20,7 @@ it doesnt make empty folders
   - Look At all these folders
   - I love sub folders
     - Files are good too
-    - 1234 You can have digits in your titles! this is a file
+    - 1234 You can have digits in your titles! this is a file @#$%^&*()<>? are okay
     - By default files are dot em dee
   - Wow sub folder
     - Files are good too, this file will end up something Files_are_good.MD 
