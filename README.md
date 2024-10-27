@@ -59,16 +59,29 @@ ONLY MAKE FILES AT THE DEEPEST INDENATION LEVEL
 node = a line in the list
 leaf = file = a node with no children
 brach = direictoy = folder
-
+parent
+child
+children
+sibling
 deepest layer
 deepest level
-
 hiearrachy
 fodler strucutre
-
 nested list
 
+
+
+
+
+
+
 for docusaorus you can have internal links for indivual pages, a table of contents for that file will be generated on the top right and the **internal links can be nested!** we love nests! use markdown syntax for h1 and h2 headers
+
+
+
+
+
+
 ## Headers
 
 will show up on the table of contents on the upper right
@@ -83,56 +96,25 @@ The headers are well-spaced so that the hierarchy is clear.
 
 
 
-![Docstosaurus Logo](https://github.com/morganross/docstosaurus/raw/main/logo.png)
 
-**Docstosaurus** is a Python-based GUI application designed to transform structured Markdown (`.md`) files into organized directory hierarchies with individual Markdown files. Tailored for developers, writers, and content creators, Docstosaurus simplifies the management of extensive documentation projects by breaking down complex Markdown documents into manageable, interlinked files and folders.
-
-**Docstosaurus** allows the user to create a directory structure, files, and thier content from a text document like Word or Google Docs, or any text editor that is hierarchy-aware and saves as Markdown.
-Text is sanitized before creating filenames by default, or you can specify exact filesnames inline in the document.
-
-actully it doesnt need markdown at all. it goes by spaces. and allows for imperfections. 
 ---
 
 #
-here is some logic that prolly doesnt work
+here is some logic for ALLOW EMPTY FOLDERS
 
 
-do i have children? yes, is folder
+do i have children? 
 
+if yes then folder, if no,
 
+DO ANY OF MY SIBLINGS HAVE CHILDREN? 
 
-do i have children, no
+if yes then file, if not  then folder
 
-am i the deepest level in this group, no
-
-then folder
-
-if in deepest level? (in that section)?
-
- then file
+this prevents the creation of a set of empty subfolders unless one subfolder contains at least one file or subfolder
+fix is just to put one empty file at the bottom of a directory structure, or to specify a "fixer empty file to be deleted" line as a child of empty parent ditory in a direcotry of childess folders
 
 
 
-
-
-??
-
-dont put files and folders into folders,??
-
-if there is one folder in that directory, then instead of file for leaf, make a folder
-
-Do i have children, if yes, then folder, if not then
-
-DO ANY OF MY SIBLINGS HAVE CHILDREN?
-if yes, then i am a folder
-
-
-
-
-
-could just prepend the line with "file"
-
-OR BETTER
-
-TO specifty to make empty folder
+specifty to make empty folder
 
