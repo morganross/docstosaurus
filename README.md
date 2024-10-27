@@ -5,7 +5,16 @@ Write a nested list and Docstosaurus will convert it to a hierarchy directoiy st
 
 
 it doesnt make empty folders
+
 ADD CHECKBOX FOR EMPTY FOLDERS
+
+move docusauros logic to seperate part 
+
+(the header stuff), make it more generalized
+
+add the part for roman numeralls and such
+
+
 
 ## Directory Structure
 
