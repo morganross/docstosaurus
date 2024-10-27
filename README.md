@@ -20,7 +20,7 @@ Write a nested list and Docstosaurus will convert it to a hierarchy directoiy st
     - 1234 You can have digits in your titles! this is a file
     - By default files are dot em dee
   - Wow sub folder
-    - Files are good too
+    - Files are good too, this file will end up as "Files are good...".MD
     - Here is a a file called “hiworld.txt” it will have content written in it.
     - **Lets write in this file**
     - **HELLO WORLD**
