@@ -19,8 +19,8 @@ add the part for roman numeralls and such
 ## Directory Structure
 
 - This line becomes a directory named after this very line
-  - This becomes a file whose name would start with This becomes a file
-  - File here. If a line has no children, it becomes a file.
+  - This becomes a file/folder whose name would start with This becomes a file/folder
+  - File here or folder. If a line has no children, it becomes a file., unless you check allow empty folders
   - Another folder, under /This line becomes/
     - This line becomes a file. The lines on the last layer become empty files.
     - What Really Files and folders are named after the line they represent, in this case, **What Really Files.md**
