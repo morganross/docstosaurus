@@ -8,6 +8,8 @@ it doesnt make empty folders
 
 ADD CHECKBOX FOR EMPTY FOLDERS
 
+that is hard and vert different, new project!
+
 move docusauros logic to seperate part 
 
 (the header stuff), make it more generalized
