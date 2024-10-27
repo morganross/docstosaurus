@@ -8,10 +8,10 @@ it doesnt make empty folders
 
 ## Directory Structure
 
-- This is a directory named afther this very line
+- This is a directory named after this very line
   - This becomes a file whose name would start with This becomes a file
-  - File here. If a node has no children, it becomes a leaf
-  - This one is a folder. Directories are named after the line on the list you proide.
+  - File here. If a line has no children, it becomes a file.
+  - This one is a folder. 
     - This line becomes a file. The lines on the last layer become empty files.
     - What Really Files and folders are named after the line they represent, in this case, **What Really Files.md**
     - Unless specified, files are `.MD`
@@ -40,6 +40,11 @@ it doesnt make empty folders
 
 
   Bullet Points, Numbers, Letters, Roman Numbers, Tabs, spaces, or indent. 
+
+
+node = a line in the list
+leaf = file = a node with no children
+brach = direictoy = folder
 
 
 ___for docusaorus you can have internal links for indivual pages, a table of contents for that file will be generated on the top right and the **internal links can be nested!** we love nests! use markdown syntax for h1 and h2 headers
