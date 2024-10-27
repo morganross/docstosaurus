@@ -9,7 +9,8 @@ it doesnt make empty folders
 ## Directory Structure
 
 - This is a directory named afther this very line
-  - This becomes a file whose name would start with This becomes a sub......
+  - This becomes a file whose name would start with This becomes a file
+  - File here. If a node has no children, it becomes a leaf
   - This one is a folder. Directories are named after the line on the list you proide.
     - This line becomes a file. The lines on the last layer become empty files.
     - What Really Files and folders are named after the line they represent, in this case, **What Really Files.md**
