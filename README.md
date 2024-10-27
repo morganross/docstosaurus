@@ -8,6 +8,8 @@ it doesnt make empty folders
 
 ADD CHECKBOX FOR EMPTY FOLDERS
 
+specify 
+
 that is hard and vert different, new project!
 
 move docusauros logic to seperate part 
@@ -92,3 +94,45 @@ actully it doesnt need markdown at all. it goes by spaces. and allows for imperf
 ---
 
 #
+here is some logic that prolly doesnt work
+
+
+do i have children? yes, is folder
+
+
+
+do i have children, no
+
+am i the deepest level in this group, no
+
+then folder
+
+if in deepest level? (in that section)?
+
+ then file
+
+
+
+
+
+??
+
+dont put files and folders into folders,??
+
+if there is one folder in that directory, then instead of file for leaf, make a folder
+
+Do i have children, if yes, then folder, if not then
+
+DO ANY OF MY SIBLINGS HAVE CHILDREN?
+if yes, then i am a folder
+
+
+
+
+
+could just prepend the line with "file"
+
+OR BETTER
+
+TO specifty to make empty folder
+
