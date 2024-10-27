@@ -12,7 +12,7 @@ Write a nested list and Docstosaurus will convert it to a hierarchy directoiy st
     - What Really Files and folders are named after the line they represent, in this case, **What Really Files.md**
     - Unless specified, files are `.MD`
   - Back to Folder
-## - New Folder!
+ - New Folder!
   - Look At all these folders
   - I love sub folders
     - Files are good too
