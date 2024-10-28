@@ -1,4 +1,6 @@
 what if you have a bodyline under a empty folder?'
+
+also fix the overwrite issue
 # Docstosaurus
 
 Write a nested list and Docstosaurus will convert it to a hierarchy directoiy structure, files and their content.
