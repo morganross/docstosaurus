@@ -1,5 +1,7 @@
 what if you have a bodyline under a empty folder?'
 
+rename the index using the regular way
+
 if bodylines are indented, will they affect the row heairchay? no, cuse we sanitize
 
 also fix the overwrite issue
