@@ -47,19 +47,33 @@ Write a nested list and Docstosaurus will convert it to a hierarchy directoiy st
   Bullet Points, Numbers, !Letters, !Roman Numbers, Tabs, spaces, or indent. 
 
 ##WORDS
+
 node = a line in the list
+
 leaf = file = a node with no children
+
 brach = direictoy = folder
+
 parent
+
 child
+
 children
+
 sibling
+
 deepest layer = no other lines have greater indent
+
 deepest level
+
 hiearrachy
+
 fodler strucutre
+
 nested list
+
 root = base_dir = install folder
+
 indent = number of spaces = leading whitepace
 
 
