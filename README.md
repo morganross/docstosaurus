@@ -10,21 +10,6 @@ also fix the overwrite issue
 Write a nested list and Docstosaurus will convert it to a hierarchy directoiy structure, files and their content.
 
 
-it doesnt make empty folders
-
-ADD CHECKBOX FOR EMPTY FOLDERS
-
-specify 
-
-that is hard and vert different, new project!
-
-move docusauros logic to seperate part 
-
-(the header stuff), make it more generalized
-
-add the part for roman numeralls and such
-
-ONLY MAKE FILES AT THE DEEPEST INDENATION LEVEL
 
 ## Directory Structure
 
@@ -59,7 +44,7 @@ ONLY MAKE FILES AT THE DEEPEST INDENATION LEVEL
 
 
 
-  Bullet Points, Numbers, Letters, Roman Numbers, Tabs, spaces, or indent. 
+  Bullet Points, Numbers, !Letters, !Roman Numbers, Tabs, spaces, or indent. 
 
 ##WORDS
 node = a line in the list
@@ -69,12 +54,13 @@ parent
 child
 children
 sibling
-deepest layer
+deepest layer = no other lines have greater indent
 deepest level
 hiearrachy
 fodler strucutre
 nested list
-
+root = base_dir = install folder
+indent = number of spaces = leading whitepace
 
 
 
@@ -82,9 +68,6 @@ nested list
 
 
 for docusaorus you can have internal links for indivual pages, a table of contents for that file will be generated on the top right and the **internal links can be nested!** we love nests! use markdown syntax for h1 and h2 headers
-
-
-
 
 
 
@@ -99,28 +82,4 @@ So that your users will know what this page is all about without scrolling down 
 You can configure the TOC heading levels either per-document or in the theme configuration.
 
 The headers are well-spaced so that the hierarchy is clear.
-
-
-
-
----
-
-#
-here is some logic for ALLOW EMPTY FOLDERS
-
-
-do i have children? 
-
-if yes then folder, if no,
-
-DO ANY OF MY SIBLINGS HAVE CHILDREN? 
-
-if yes then file, if not  then folder
-
-this prevents the creation of a set of empty subfolders unless one subfolder contains at least one file or subfolder
-fix is just to put one empty file at the bottom of a directory structure, or to specify a "fixer empty file to be deleted" line as a child of empty parent ditory in a direcotry of childess folders
-
-
-
-specifty to make empty folder
 
