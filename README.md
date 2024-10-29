@@ -9,7 +9,7 @@ also fix the overwrite issue
 
 Write a nested list and Docstosaurus will convert it to a hierarchy directoiy structure, files and their content.
 
-
+By default, Docusaurus will remove the number prefix from the doc id, title, label, and URL paths.
 
 ## Directory Structure
 
