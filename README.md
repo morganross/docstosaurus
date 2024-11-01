@@ -1,3 +1,20 @@
+docusaourus really sucks see other repo
+
+Netlify
+
+and also check 
+
+gitbook
+
+and also 
+
+mkdocs 
+
+and also 
+
+sphinx
+
+
 what if you have a bodyline under a empty folder?'
 
 rename the index using the regular way
